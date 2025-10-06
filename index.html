@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Red Vital - Medicina y Rehabilitación</title>
+    <meta name="description" content="Clínica en Temuco especializada en medicina física y rehabilitación, Traumatología, Fisiatría, Kinesiología, Ecografía, Electromiografía.">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2696416313.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="/recursos/Logo RedVital Blanco.png" alt="Logo RedVital" class="logo">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">RESERVAR HORA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">RESULTADO DE EXÁMENES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">PRESUPUESTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">CONTACTO</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="/recursos/Slider/Silder 1.jpg" alt="Slide 1" class="slide-image">
+                <div class="slide-content">
+                    <h1>VER RESULTADOS<br><span class="highlight">DE EXÁMENES</span></h1>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/recursos/Slider/Slider 2.jpg" alt="Slide 2" class="slide-image">
+                <div class="slide-content">
+                    <h1>ESPECIALIDADES<br><span class="highlight">MÉDICAS</span></h1>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/recursos/Slider/Slider 3.jpg" alt="Slide 3" class="slide-image">
+                <div class="slide-content">
+                    <h1>ESPECIALIDADES<br><span class="highlight">MÉDICAS</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-btn">❮</button>
+            <button class="next-btn">❯</button>
+        </div>
+    </section>
+
+    <!-- Medical Specialties Section -->
+    <section class="specialties">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">CLÍNICA RED VITAL</span>
+                <h2 class="section-title">ESPECIALIDADES MÉDICAS</h2>
+            </div>
+            <div class="specialties-grid">
+                <div class="specialty-card dark">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-brain" alt="Neurología"></i>
+                    </div>
+                    <h3>Neurología</h3><br>
+                    <a href="#" class="btn-agendar">AGENDAR</a>
+                </div>
+                <div class="specialty-card blue">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-brain" alt="Urología"></i>
+                    </div>
+                    <h3>Urología</h3><br>
+                    <a href="#" class="btn-agendar">AGENDAR</a></i>
+                </div>
+                <div class="specialty-card dark">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-brain" alt="Cirujano Vascular"></i>
+                    </div>
+                    <h3>Cirujano Vascular y<br>Endovascular</h3>
+                    <a href="#" class="btn-agendar">AGENDAR</a>
+                </div>
+                <div class="specialty-card blue">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-brain" alt="Medicina del dolor"></i>
+                    </div>
+                    <h3>Medicina del dolor</h3><br>
+                    <a href="#" class="btn-agendar">AGENDAR</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Section -->
+    <section class="treatments">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">CLÍNICA RED VITAL</span>
+                <h2 class="section-title">TRATAMIENTOS</h2>
+            </div>
+            <div class="treatments-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="regenerativa">MEDICINA REGENERATIVA</button>
+                    <button class="tab-btn" data-tab="dolor">INTERVENCIONISMO EN DOLOR</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-panel active" id="regenerativa">
+                        <ul class="treatment-list">
+                            <li>PLASMA RICO EN PLAQUETAS</li>
+                            <li>ÁCIDO HIALURÓNICO</li>
+                        </ul>
+                        <a href="#" class="btn-info">Más información</a>
+                    </div>
+                    <div class="tab-panel" id="dolor">
+                        <ul class="treatment-list">
+                            <li>PARCHE CAPSAICINA</li>
+                            <li>RADIOFRECUENCIA</li>
+                            <li>INFILTRACIÓN TOXINA BUTOLÍNICA</li>
+                            <li>BLOQUEO DE GANGLIO ESTRELLADO</li>
+                            <li>BLOQUEO FACETARIO</li>
+                            <li>BLOQUEO NERVIOSO PERIFÉRICO</li>
+                            <li>HIDRODILATACIÓN GLENOHUMERAL</li>
+                            <li>HIDRODISECCIÓN DE NERVIO PERIFÉRICO</li>
+                            <li>PROLOTERAPIA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rehabilitation Section -->
+    <section class="rehabilitation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">CLÍNICA RED VITAL</span>
+                <h2 class="section-title">REHABILITACIÓN ALTAMENTE ESPECIALIZADA</h2>
+            </div>
+            <div class="rehab-tabs">
+                <div class="rehab-tab-buttons">
+                    <button class="rehab-tab-btn active" data-tab="areas">ÁREAS</button>
+                    <button class="rehab-tab-btn" data-tab="equipos">EQUIPOS</button>
+                    <button class="rehab-tab-btn" data-tab="intervenciones">INTERVENCIONES</button>
+                    <button class="rehab-tab-btn" data-tab="ortesis">ORTESIS</button>
+                </div>
+                <div class="rehab-tab-content">
+                    <div class="rehab-tab-panel active" id="areas">
+                        <ul class="rehab-list">
+                            <li>✓ Musculoesquelética</li>
+                            <li>✓ Pre y postparto</li>
+                            <li>✓ Piso pélvico</li>
+                            <li>✓ Cardiovascular</li>
+                            <li>✓ Neurológica</li>
+                            <li>✓ Postquirúrgica</li>
+                            <li>✓ Deportiva</li>
+                            <li>✓ Terapia Ocupacional</li>
+                        </ul>
+                    </div>
+                    <div class="rehab-tab-panel" id="equipos">
+                        <div class="equipment-teams">
+                            <div class="team">
+                                <h4>Equipo Columna</h4>
+                                <p>Harold Valdebenito M.<br><span>Kinesiólogo</span></p>
+                                <p>Matías Rodríguez<br><span>Kinesiólogo</span></p>
+                            </div>
+                            <div class="team">
+                                <h4>Equipo Extremidad Superior</h4>
+                                <p>Dominique Patri A.<br><span>Kinesióloga</span></p>
+                            </div>
+                            <div class="team">
+                                <h4>Equipo Extremidad Inferior</h4>
+                                <p>Juan Carranza L.<br><span>Kinesiólogo</span></p>
+                                <p>Tomás Maturana<br><span>Kinesiólogo</span></p>
+                            </div>
+                            <div class="team">
+                                <h4>Equipo Pelvis y Piso Pélvico</h4>
+                                <p>Sofía Sánchez C.<br><span>Kinesióloga</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rehab-tab-panel" id="intervenciones">
+                        <div class="interventions">
+                            <div class="intervention-item">Laser alta densidad</div>
+                            <div class="intervention-item">Punción seca</div>
+                            <div class="intervention-item">Ondas de choque</div>
+                            <div class="intervention-item">Fisioterapia</div>
+                        </div>
+                    </div>
+                    <div class="rehab-tab-panel" id="ortesis">
+                        <div class="ortesis-content">
+                            <h4>La órtesis que necesitas, diseñada para ti.</h4>
+                            <p>En Clínica Medifis, confeccionamos órtesis a medida para garantizar comodidad, funcionalidad y mejores resultados en tu rehabilitación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exams Section -->
+    <section class="exams">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">CLÍNICA RED VITAL</span>
+                <h2 class="section-title">SERVICIO DE EXÁMENES</h2>
+            </div>
+            <div class="exams-grid">
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <img src="https://ext.same-assets.com/2225740022/1116840917.svg" alt="Electromiografía">
+                    </div>
+                    <h3>Electromiografía</h3>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <img src="https://ext.same-assets.com/2225740022/952028528.svg" alt="Ecografía">
+                    </div>
+                    <h3>Ecografía</h3>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <img src="https://ext.same-assets.com/2225740022/807549571.svg" alt="Rayos X">
+                    </div>
+                    <h3>Rayos X</h3>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <img src="https://ext.same-assets.com/2225740022/1525762660.svg" alt="Densitometría">
+                    </div>
+                    <h3>Densitometría</h3>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <img src="https://ext.same-assets.com/2225740022/1969192977.svg" alt="BIKEFIT">
+                    </div>
+                    <h3>BIKEFIT</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Electromiografía Detail Section -->
+    <section class="electro-detail">
+        <div class="container">
+            <div class="electro-content">
+                <div class="electro-text">
+                    <h2>Electromiografía</h2>
+                    <a href="#" class="btn-agendar-detail">AGENDAR >></a>
+                </div>
+                <div class="electro-image">
+                    <img src="https://ext.same-assets.com/2225740022/1385211218.jpeg" alt="Electromiografía">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.6430811478635!2d-72.6056894!3d-38.7400478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3fafc7c463d%3A0xe9e7ae705d389ca!2sPhillippi%20895%2C%204810379%20Temuco%2C%20Araucan%C3%ADa!5e1!3m2!1ses!2scl!4v1759337192152!5m2!1ses!2scl"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CONTACTO</h3>
+                    <div class="contact-info">
+                        <p>📍 18 de Septiembre # 611<br>Temuco - Chile</p>
+                        <p>📞 <a href="tel:+56961782759">+56 9 6178 2759</a></p>
+                        <p>✉️ <a href="mailto:lossiermail@gmail.com">contacto@redvital.cl</a></p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>ESPECIALIDADES MÉDICAS</h3>
+                    <ul>
+                        <li><a href="#">Medicina del dolor</a></li>
+                        <li><a href="#">Fisiatra</a></li>
+                        <li><a href="#">Traumatología</a></li>
+                        <li><a href="#">Neurología</a></li>
+                        <li><a href="#">Urología</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>TRATAMIENTOS</h3>
+                    <ul>
+                        <li><a href="#">Medicina Regenerativa</a></li>
+                        <li><a href="#">Intervencionismo del dolor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>EXÁMENES</h3>
+                    <ul>
+                        <li><a href="#">Electromiografía</a></li>
+                        <li><a href="#">Ecografía</a></li>
+                        <li><a href="#">Rayos X</a></li>
+                        <li><a href="#">Densitometría</a></li>
+                        <li><a href="#">Bikefit</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="https://ext.same-assets.com/2225740022/2583571331.png" alt="MediFis Logo">
+                </div>
+                <p>Todos los derechos reservados © 2025, Clínica Red Vital</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/56975591626?text=%C2%A1Hola!%20Me%20contacto%20desde%20la%20p%C3%A1gina%20web%20para%20agendar%20una%20hora."
+       class="whatsapp-btn"
+       target="_blank"
+       rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i>
+        <!-- <img src="https://ext.same-assets.com/2225740022/377071953.svg" alt="WhatsApp"> -->
+        <span>Hola, Chatea con nosotros?</span>
+    </a>
+
+    <script src="src/main.ts" type="module"></script>
+</body>
+</html>
