@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica Red Vital - Medicina y Rehabilitación</title>
     <meta name="description" content="Clínica en Temuco especializada en medicina física y rehabilitación, Traumatología, Fisiatría, Kinesiología, Ecografía, Electromiografía.">
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="./src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -20,20 +20,26 @@
                     <img src="./recursos/LogoRedVitalBlanco.png" alt="Logo RedVital" class="logo">
                 </div>
                 <ul class="nav-menu">
+                    <!--<li class="nav-item">
+                        <a href="#home" class="nav-link">INICIO</a>
+                    </li>-->
                     <li class="nav-item">
-                        <a href="#" class="nav-link">HOME</a>
+                        <a href="#about" class="nav-link">QUIÉNES SOMOS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">RESERVAR HORA</a>
+                        <a href="#profesionales" class="nav-link">PROFESIONALES</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">RESULTADO DE EXÁMENES</a>
+                        <a href="#tratamientos" class="nav-link">TRATAMIENTOS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">PRESUPUESTOS</a>
+                        <a href="#rehabilitacion" class="nav-link">REHABILITACIÓN</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">CONTACTO</a>
+                        <a href="#contacto" class="nav-link">CONTACTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://meet.google.com/landing" class="nav-link">CONSULTA VIRTUAL</a>
                     </li>
                 </ul>
                 <div class="hamburger">
@@ -46,75 +52,219 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-slider">
             <div class="slide active">
                 <img src="./recursos/Slider/Silder1.jpg" alt="Slide 1" class="slide-image">
                 <div class="slide-content">
-                    <h1>VER RESULTADOS<br><span class="highlight">DE EXÁMENES</span></h1>
+                    <h1>TU SALUD ES<br><span class="highlight">NUESTRA PRIORIDAD</span></h1>
+                    <a style="margin-top: 1em;" href="https://linktr.ee/clinicaredvital?ltsid=64bffde5-3070-432e-8dbb-5ad76510570a" class="btn-agendar-detail">AGENDAR >></a>
                 </div>
             </div>
             <div class="slide">
                 <img src="./recursos/Slider/Slider2.jpg" alt="Slide 2" class="slide-image">
                 <div class="slide-content">
                     <h1>ESPECIALIDADES<br><span class="highlight">MÉDICAS</span></h1>
+                    <a style="margin-top: 1em;" href="https://linktr.ee/clinicaredvital?ltsid=64bffde5-3070-432e-8dbb-5ad76510570a" class="btn-agendar-detail">AGENDAR >></a>
                 </div>
             </div>
             <div class="slide">
                 <img src="./recursos/Slider/Slider3.jpg" alt="Slide 3" class="slide-image">
                 <div class="slide-content">
                     <h1>ESPECIALIDADES<br><span class="highlight">MÉDICAS</span></h1>
+                    <a style="margin-top: 1em;" href="https://linktr.ee/clinicaredvital?ltsid=64bffde5-3070-432e-8dbb-5ad76510570a" class="btn-agendar-detail">AGENDAR >></a>
                 </div>
             </div>
         </div>
         <div class="slider-controls">
-            <button class="prev-btn">❮</button>
-            <button class="next-btn">❯</button>
+            <button class="prev-btn" aria-label="Slide anterior">❮</button>
+            <button class="next-btn" aria-label="Slide siguiente">❯</button>
         </div>
     </section>
 
-    <!-- Medical Specialties Section -->
-    <section class="specialties">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">CLÍNICA RED VITAL</span>
-                <h2 class="section-title">ESPECIALIDADES MÉDICAS</h2>
-            </div>
-            <div class="specialties-grid">
-                <div class="specialty-card dark">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-brain" alt="Neurología"></i>
-                    </div>
-                    <h3>Neurología</h3><br>
-                    <a href="#" class="btn-agendar">AGENDAR</a>
-                </div>
-                <div class="specialty-card blue">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-brain" alt="Urología"></i>
-                    </div>
-                    <h3>Urología</h3><br>
-                    <a href="#" class="btn-agendar">AGENDAR</a></i>
-                </div>
-                <div class="specialty-card dark">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-brain" alt="Cirujano Vascular"></i>
-                    </div>
-                    <h3>Cirujano Vascular y<br>Endovascular</h3>
-                    <a href="#" class="btn-agendar">AGENDAR</a>
-                </div>
-                <div class="specialty-card blue">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-brain" alt="Medicina del dolor"></i>
-                    </div>
-                    <h3>Medicina del dolor</h3><br>
-                    <a href="#" class="btn-agendar">AGENDAR</a>
+<!-- About Section - Quiénes Somos -->
+<section class="specialties" id="about">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">CLÍNICA RED VITAL</span>
+            <h2 class="section-title">QUIÉNES SOMOS</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <div class="about-description">
+                    <p>En el corazón de Temuco, trabajamos por lo más importante: tu salud y la de tu familia. Somos un centro médico integral que reúne a profesionales de distintas disciplinas para brindarte una atención completa, coordinada y ajustada a lo que realmente necesitas.</p>
+                    
+                    <p>Nuestro sello es el <strong>trato humano y cercano</strong>, porque entendemo que cada proceso de salud requiere no solo conocimiento y experiencia, sino también acompañamiento y confianza. En Redvital, no solo encontrarás médicos y terapeutas: encontrarás un <strong>equipo comprometido con tu bienestar</strong>, que estará atento a cada detalle de tu camino de recuperación.</p>
+                    
+                    <p>Porque cuidar de ti es también cuidar de quienes amas, en Redvital nos esforzamos día a día por ser ese espacio donde la ciencia, la calidez y la atención personalizada se encuentran.</p>
                 </div>
             </div>
         </div>
-    </section>
+        
+    </div>
+</section>
+
+<!-- Sección de Profesionales y Horarios -->
+<section class="professionals" id="profesionales">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">CLÍNICA RED VITAL</span>
+            <h2 class="section-title">LISTADO DE PROFESIONALES Y HORARIOS DE ATENCIÓN</h2>
+        </div>
+        
+        <div class="professionals-grid">
+            <!-- Tarjeta 1: Psiquiatría -->
+            <div class="professional-card">
+                <div class="card-header">
+                    <h3>MÉDICO PSIQUIATRA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="professionals-list">
+                        <div class="professional-name">• Oscar Sepúlveda</div>
+                        <div class="professional-name">• René Beltrán</div>
+                        <div class="professional-name">• Daniela Peña</div>
+                    </div>
+                    <div class="schedule">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Horario: Martes a jueves, de 15:00 a 20:00 hrs.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 2: Pediatría -->
+            <div class="professional-card">
+                <div class="card-header">
+                    <h3>PEDIATRA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="professionals-list">
+                        <div class="professional-name">• Yoseline Blanco</div>
+                    </div>
+                    <div class="schedule">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Horario: Miércoles, de 15:00 a 18:00 hrs.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 3: Geriatría -->
+            <div class="professional-card">
+                <div class="card-header">
+                    <h3>GERIATRA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="professionals-list">
+                        <div class="professional-name">• Marcela Montero</div>
+                    </div>
+                    <div class="schedule">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Horario: Jueves, de 15:00 a 20:00 hrs.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 4: Neurología -->
+            <div class="professional-card">
+                <div class="card-header">
+                    <h3>NEURÓLOGA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="professionals-list">
+                        <div class="professional-name">• Carolina Gonzales</div>
+                    </div>
+                    <div class="schedule">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Horario: Miércoles, de 15:00 a 18:00 hrs.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 5: Terapia Ocupacional -->
+            <div class="professional-card">
+                <div class="card-header">
+                    <h3>TERAPEUTAS OCUPACIONALES</h3>
+                </div>
+                <div class="card-body">
+                    <div class="professionals-list">
+                        <div class="professional-name">• Gerardo Riffo</div>
+                        <div class="professional-name">• Ignacio Pezoa</div>
+                    </div>
+                    <div class="schedule">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Horario: Lunes, de 10:00 a 13:00 hrs.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 6: Kinesiología -->
+            <div class="professional-card">
+                <div class="card-header">
+                    <h3>KINESIOLOGÍA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="professionals-list">
+                        <div class="professional-name">• Daniela Conejeros</div>
+                    </div>
+                    <div class="schedule">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Horario: Lunes, miércoles y viernes, de 10:00 a 13:00 hrs.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 7: Nutrición -->
+            <div class="professional-card">
+                <div class="card-header">
+                    <h3>NUTRICIONISTA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="professionals-list">
+                        <div class="professional-name">• Natalia Friz</div>
+                    </div>
+                    <div class="schedule">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Horario: Miércoles a viernes, de 15:00 a 20:00 hrs.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 8: Psicología -->
+            <div class="professional-card">
+                <div class="card-header">
+                    <h3>PSICÓLOGA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="professionals-list">
+                        <div class="professional-name">• Karen Muñoz</div>
+                    </div>
+                    <div class="schedule">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Horario: Lunes a jueves, de 15:00 a 18:00 hrs.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 9: Fonoaudiología -->
+            <div class="professional-card">
+                <div class="card-header">
+                    <h3>FONOAUDIÓLOGA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="professionals-list">
+                        <div class="professional-name">• Sofía Pozzo</div>
+                    </div>
+                    <div class="schedule">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Horario: Lunes y martes, de 15:00 a 18:00 hrs.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Treatments Section -->
-    <section class="treatments">
+    <section class="treatments" id="tratamientos">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">CLÍNICA RED VITAL</span>
@@ -122,28 +272,40 @@
             </div>
             <div class="treatments-tabs">
                 <div class="tab-buttons">
-                    <button class="tab-btn active" data-tab="regenerativa">MEDICINA REGENERATIVA</button>
-                    <button class="tab-btn" data-tab="dolor">INTERVENCIONISMO EN DOLOR</button>
+                    <button class="tab-btn active" data-tab="medicine">MEDICINA</button>
+                    <button class="tab-btn" data-tab="equip">EQUIPO CLÍNICO</button>
+                    <button class="tab-btn" data-tab="programs">PROGRAMAS DE TRATAMIENTO</button>
                 </div>
                 <div class="tab-content">
-                    <div class="tab-panel active" id="regenerativa">
+                    <div class="tab-panel active" id="medicine">
                         <ul class="treatment-list">
-                            <li>PLASMA RICO EN PLAQUETAS</li>
-                            <li>ÁCIDO HIALURÓNICO</li>
+                            <li>GERIATRÍA</li>
+                            <li>NEUROLOGÍA</li>
+                            <li>PEDIATRÍA</li>
+                            <li>PSIQUIATRÍA</li>
+                            <li>MEDICINA INTEGRATIVA</li>
+                            <li>MEDICINA GENERAL</li>
                         </ul>
-                        <a href="#" class="btn-info">Más información</a>
                     </div>
-                    <div class="tab-panel" id="dolor">
+                    <div class="tab-panel" id="equip">
                         <ul class="treatment-list">
-                            <li>PARCHE CAPSAICINA</li>
-                            <li>RADIOFRECUENCIA</li>
-                            <li>INFILTRACIÓN TOXINA BUTOLÍNICA</li>
-                            <li>BLOQUEO DE GANGLIO ESTRELLADO</li>
-                            <li>BLOQUEO FACETARIO</li>
-                            <li>BLOQUEO NERVIOSO PERIFÉRICO</li>
-                            <li>HIDRODILATACIÓN GLENOHUMERAL</li>
-                            <li>HIDRODISECCIÓN DE NERVIO PERIFÉRICO</li>
-                            <li>PROLOTERAPIA</li>
+                            <li>KINESIOLOGÍA</li>
+                            <li>TERAPIA OCUPACIONAL</li>
+                            <li>PSICOLOGÍA</li>
+                            <li>FONOAUDIOLOGIA</li>
+                            <li>NUTRICIÓN</li>
+                        </ul>
+                    </div>
+                     <div class="tab-panel" id="programs">
+                        <ul class="treatment-list">
+                            <li>REHABILITACIÓN NEUROLÓGICA ADULTO E INFANTIL</li>
+                            <li>REHABILITACIÓN DE PISO PÉLVICO</li>
+                            <li>REHABILITACIÓN PSICOLÓGICA ADULTO E INFANTIL</li>
+                            <li>TERAPIA OCUPACIONAL EN NEURODIVERGENCIAS</li>
+                            <li>EVALUACIÓN NEUROPSICOLÓGICAS ADULTO E INFANTIL</li>
+                            <li>REHABILITACIÓN MÚSCULO ESQUELÉTICA</li>
+                            <li>REHABILITACIÓN DE TRASTORNOS DEL SUEÑO</li>
+                            <li>REHABILITACIÓN GERONTOLÓGICA</li>
                         </ul>
                     </div>
                 </div>
@@ -152,7 +314,7 @@
     </section>
 
     <!-- Rehabilitation Section -->
-    <section class="rehabilitation">
+    <section class="rehabilitation" id="rehabilitacion">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">CLÍNICA RED VITAL</span>
@@ -163,55 +325,54 @@
                     <button class="rehab-tab-btn active" data-tab="areas">ÁREAS</button>
                     <button class="rehab-tab-btn" data-tab="equipos">EQUIPOS</button>
                     <button class="rehab-tab-btn" data-tab="intervenciones">INTERVENCIONES</button>
-                    <button class="rehab-tab-btn" data-tab="ortesis">ORTESIS</button>
                 </div>
                 <div class="rehab-tab-content">
                     <div class="rehab-tab-panel active" id="areas">
                         <ul class="rehab-list">
-                            <li>✓ Musculoesquelética</li>
-                            <li>✓ Pre y postparto</li>
-                            <li>✓ Piso pélvico</li>
-                            <li>✓ Cardiovascular</li>
-                            <li>✓ Neurológica</li>
-                            <li>✓ Postquirúrgica</li>
-                            <li>✓ Deportiva</li>
-                            <li>✓ Terapia Ocupacional</li>
+                            <li>✓ Médico Psiquiatra</li>
+                            <li>✓ Pediatra</li>
+                            <li>✓ Geriatra</li>
+                            <li>✓ Neuróloga</li>
+                            <li>✓ Terapeutas Ocupacionales</li>
+                            <li>✓ Kinesiología</li>
+                            <li>✓ Nutricionista</li>
+                            <li>✓ Psicóloga</li>
+                            <li>✓ Fonoaudióloga</li>
                         </ul>
                     </div>
                     <div class="rehab-tab-panel" id="equipos">
                         <div class="equipment-teams">
                             <div class="team">
-                                <h4>Equipo Columna</h4>
-                                <p>Harold Valdebenito M.<br><span>Kinesiólogo</span></p>
-                                <p>Matías Rodríguez<br><span>Kinesiólogo</span></p>
+                                <h4>Equipo especialista en TDAH adulto</h4>
+                                <p>Neuropsicologo</p>
+                                <p>Terapeuta ocupacional</p>
+                                <p>Psiquiatra adulto</p>
                             </div>
                             <div class="team">
-                                <h4>Equipo Extremidad Superior</h4>
-                                <p>Dominique Patri A.<br><span>Kinesióloga</span></p>
+                                <h4>Equipo de neurorehabilitación adulto</h4>
+                                <p>Terapeutas ocupacionales magister en neurociencias</p>
+                                <p>Kinesiologoa</p>
+                                <p>Fonoaudiologia</p>
                             </div>
                             <div class="team">
-                                <h4>Equipo Extremidad Inferior</h4>
-                                <p>Juan Carranza L.<br><span>Kinesiólogo</span></p>
-                                <p>Tomás Maturana<br><span>Kinesiólogo</span></p>
+                                <h4>Equipo de estimulación infantil</h4>
+                                <p>Terapia ocupacional</p>
+                                <p>Fonoaudiologia</p>
                             </div>
                             <div class="team">
-                                <h4>Equipo Pelvis y Piso Pélvico</h4>
-                                <p>Sofía Sánchez C.<br><span>Kinesióloga</span></p>
+                                <h4>Equipo de trastornos del sueño</h4>
+                                <p>Fonoaudiologia</p>
+                                <p>Neurologa</p>
                             </div>
                         </div>
                     </div>
                     <div class="rehab-tab-panel" id="intervenciones">
                         <div class="interventions">
-                            <div class="intervention-item">Laser alta densidad</div>
-                            <div class="intervention-item">Punción seca</div>
-                            <div class="intervention-item">Ondas de choque</div>
-                            <div class="intervention-item">Fisioterapia</div>
-                        </div>
-                    </div>
-                    <div class="rehab-tab-panel" id="ortesis">
-                        <div class="ortesis-content">
-                            <h4>La órtesis que necesitas, diseñada para ti.</h4>
-                            <p>En Clínica Medifis, confeccionamos órtesis a medida para garantizar comodidad, funcionalidad y mejores resultados en tu rehabilitación.</p>
+                            <div class="intervention-item">Intervención en trastornos del estado de animo</div>
+                            <div class="intervention-item">Trastornos neurologicos</div>
+                            <div class="intervention-item">⁠Neurorehabilitación </div>
+                            <div class="intervention-item">⁠Estimulación temprana</div>
+                            <div class="intervention-item">⁠Trastornos del sueño</div>
                         </div>
                     </div>
                 </div>
@@ -220,19 +381,13 @@
     </section>
 
     <!-- Exams Section -->
-    <section class="exams">
+    <section class="exams" id="examenes">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">CLÍNICA RED VITAL</span>
                 <h2 class="section-title">SERVICIO DE EXÁMENES</h2>
             </div>
             <div class="exams-grid">
-                <div class="exam-card">
-                    <div class="exam-icon">
-                        <img src="https://ext.same-assets.com/2225740022/1116840917.svg" alt="Electromiografía">
-                    </div>
-                    <h3>Electromiografía</h3>
-                </div>
                 <div class="exam-card">
                     <div class="exam-icon">
                         <img src="https://ext.same-assets.com/2225740022/952028528.svg" alt="Ecografía">
@@ -261,23 +416,8 @@
         </div>
     </section>
 
-    <!-- Electromiografía Detail Section -->
-    <section class="electro-detail">
-        <div class="container">
-            <div class="electro-content">
-                <div class="electro-text">
-                    <h2>Electromiografía</h2>
-                    <a href="#" class="btn-agendar-detail">AGENDAR >></a>
-                </div>
-                <div class="electro-image">
-                    <img src="https://ext.same-assets.com/2225740022/1385211218.jpeg" alt="Electromiografía">
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Map Section -->
-    <section class="map-section">
+    <section class="map-section" id="contacto">
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.6430811478635!2d-72.6056894!3d-38.7400478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3fafc7c463d%3A0xe9e7ae705d389ca!2sPhillippi%20895%2C%204810379%20Temuco%2C%20Araucan%C3%ADa!5e1!3m2!1ses!2scl!4v1759337192152!5m2!1ses!2scl"
                     width="100%"
@@ -295,46 +435,43 @@
                 <div class="footer-column">
                     <h3>CONTACTO</h3>
                     <div class="contact-info">
-                        <p>📍 18 de Septiembre # 611<br>Temuco - Chile</p>
-                        <p>📞 <a href="tel:+56961782759">+56 9 6178 2759</a></p>
-                        <p>✉️ <a href="mailto:lossiermail@gmail.com">contacto@redvital.cl</a></p>
+                        <p>📍 Phillippi #895<br>Temuco - Chile</p>
+                        <p>📞 <a href="tel:+56956859111">+56 9 5685 9111</a></p>
+                        <p>✉️ <a href="mailto:redvitalclinica@gmail.com">redvitalclinica@gmail.com</a></p>
                     </div>
                     <div class="social-links">
-                        <a href="https://web.facebook.com/" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <!--<a href="https://web.facebook.com/" class="social-link"><i class="fa-brands fa-facebook"></i></a> -->
+                        <a href="https://www.instagram.com/Clinicaredvital" class="social-link"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h3>ESPECIALIDADES MÉDICAS</h3>
                     <ul>
-                        <li><a href="#">Medicina del dolor</a></li>
-                        <li><a href="#">Fisiatra</a></li>
-                        <li><a href="#">Traumatología</a></li>
-                        <li><a href="#">Neurología</a></li>
-                        <li><a href="#">Urología</a></li>
+                        <li>Médico Psiquiatra</li>
+                        <li>Pediatra</li>
+                        <li>Geriatra</li>
+                        <li>Neuróloga</li>
+                        <li>Terapeutas Ocupacionales</li>
+                        <li>Kinesiología</li>
+                        <li>Nutricionista</li>
+                        <li>Psicóloga</li>
+                        <li>Fonoaudióloga</li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>TRATAMIENTOS</h3>
                     <ul>
-                        <li><a href="#">Medicina Regenerativa</a></li>
-                        <li><a href="#">Intervencionismo del dolor</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>EXÁMENES</h3>
-                    <ul>
-                        <li><a href="#">Electromiografía</a></li>
-                        <li><a href="#">Ecografía</a></li>
-                        <li><a href="#">Rayos X</a></li>
-                        <li><a href="#">Densitometría</a></li>
-                        <li><a href="#">Bikefit</a></li>
+                        <li>GERIATRÍA</li>
+                        <li>NEUROLOGÍA</li>
+                        <li>PEDIATRÍA</li>
+                        <li>PSIQUIATRÍA</li>
+                        <li>MEDICINA INTEGRATIVA</li>
+                        <li>MEDICINA GENERAL</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="footer-logo">
-                    <img src="https://ext.same-assets.com/2225740022/2583571331.png" alt="MediFis Logo">
                 </div>
                 <p>Todos los derechos reservados © 2025, Clínica Red Vital</p>
             </div>
@@ -342,12 +479,11 @@
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/56975591626?text=%C2%A1Hola!%20Me%20contacto%20desde%20la%20p%C3%A1gina%20web%20para%20agendar%20una%20hora."
+    <a href="https://wa.me/56956859111?text=%C2%A1Hola!%20Me%20contacto%20desde%20la%20p%C3%A1gina%20web%20para%20agendar%20una%20hora."
        class="whatsapp-btn"
        target="_blank"
        rel="noopener noreferrer">
-        <i class="fa-brands fa-whatsapp"></i>
-        <!-- <img src="https://ext.same-assets.com/2225740022/377071953.svg" alt="WhatsApp"> -->
+        <i class="fa-brands fa-whatsapp" style="font-size: 3rem;"></i>
         <span>Hola, Chatea con nosotros?</span>
     </a>
 

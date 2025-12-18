@@ -42,7 +42,7 @@ body {
 }
 
 .nav-logo .logo {
-    height: 60px;
+    height: 50px;
     width: auto;
 }
 
@@ -262,6 +262,102 @@ body {
 .specialty-card.blue .btn-agendar:hover {
     background: white;
     color: #5abbf7;
+}
+
+/* About Section - Quiénes Somos */
+.about-content {
+    display: grid;
+    grid-template-columns: 3fr 0fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.about-description {
+    margin-bottom: 3rem;
+    text-align: justify;
+}
+
+.about-description p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+   
+}
+
+.about-description strong {
+    color: #203A52;
+    font-weight: 600;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: #5abbf7;
+    margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+    color: #203A52;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.feature-item p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: #203A52;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+    background: #5abbf7;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 /* Treatments Section */
@@ -527,17 +623,19 @@ body {
 .btn-agendar-detail {
     display: inline-block;
     padding: 1rem 2rem;
-    border: 2px solid white;
+    background: #203A52;
     color: white;
     text-decoration: none;
     font-weight: 600;
     border-radius: 5px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-agendar-detail:hover {
     background: white;
     color: #203A52;
+    cursor: pointer;
 }
 
 .electro-image img {
@@ -647,9 +745,10 @@ body {
     transform: scale(1.05);
 }
 
-.whatsapp-btn img {
-    width: 24px;
-    height: 24px;
+
+#wsicon{
+    font-size: 20rem !important;
+    font-weight: 500;
 }
 
 .whatsapp-btn span {
@@ -657,7 +756,129 @@ body {
     font-weight: 500;
 }
 
+/* Professionals Section - Versión Mejorada */
+.professionals {
+    padding: 5rem 0;
+    background: white;
+}
+
+.professionals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.professional-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 280px; /* Altura mínima consistente */
+}
+
+.professional-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    background: #203A52;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    flex-shrink: 0; /* Evita que el header se encoja */
+}
+
+.card-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+.card-body {
+    padding: 1.5rem;
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+.professionals-list {
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.professional-name {
+    padding: 0.5rem 0;
+    color: #333;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+}
+
+.professional-name:last-child {
+    border-bottom: none;
+}
+
+.schedule {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #5abbf7;
+    margin-top: auto; /* Esto empuja el horario hacia abajo */
+    flex-shrink: 0; /* Evita que se encoja */
+}
+
+.schedule i {
+    color: #5abbf7;
+    font-size: 1.1rem;
+    min-width: 20px;
+    margin-top: 2px; /* Alinea mejor el icono */
+}
+
+.schedule span {
+    color: #203A52;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* Animaciones para las tarjetas */
+.professional-card:nth-child(1) { animation-delay: 0.1s; }
+.professional-card:nth-child(2) { animation-delay: 0.2s; }
+.professional-card:nth-child(3) { animation-delay: 0.3s; }
+.professional-card:nth-child(4) { animation-delay: 0.4s; }
+.professional-card:nth-child(5) { animation-delay: 0.5s; }
+.professional-card:nth-child(6) { animation-delay: 0.6s; }
+.professional-card:nth-child(7) { animation-delay: 0.7s; }
+.professional-card:nth-child(8) { animation-delay: 0.8s; }
+.professional-card:nth-child(9) { animation-delay: 0.9s; }
+
 /* Responsive Design */
+
+@media (max-width: 968px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -714,6 +935,23 @@ body {
         text-align: center;
     }
 
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .stat-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+
     .footer-bottom {
         flex-direction: column;
         gap: 1rem;
@@ -726,8 +964,28 @@ body {
         max-width: 200px;
     }
 
+    
+
     .whatsapp-btn span {
         font-size: 0.8rem;
+    }
+
+    .professionals-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .professional-card {
+        max-width: 100%;
+        min-height: 260px; /* Ajuste para móvil */
+    }
+    
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .schedule {
+        flex-wrap: wrap;
     }
 }
 
@@ -750,6 +1008,35 @@ body {
         width: 60px;
         height: 60px;
         justify-content: center;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-description p {
+        font-size: 1rem;
+    }
+    .professionals {
+        padding: 3rem 0;
+    }
+    
+    .professional-card {
+        min-height: 250px;
+    }
+    
+    .schedule {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .schedule i {
+        margin-top: 2px;
+    }
+    
+    .schedule span {
+        font-size: 0.9rem;
     }
 }
 

@@ -60,33 +60,44 @@ class MobileNav {
     }
 
     setupMobileNav() {
-        if (this.hamburger && this.navMenu) {
-            this.hamburger.addEventListener('click', () => {
-                this.toggleMobileMenu();
-            });
-
-            // Close menu when clicking on nav links
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    this.closeMobileMenu();
-                });
-            });
+        // Verificar que los elementos existen
+        if (!this.hamburger || !this.navMenu) {
+            console.error('No se encontró el hamburger o nav-menu');
+            return;
         }
+
+        // Evento click en el hamburger
+        this.hamburger.addEventListener('click', () => {
+            console.log('Click en hamburger detectado');
+            this.toggleMobileMenu();
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                this.closeMobileMenu();
+            });
+        });
+
+        // Cerrar menú al hacer click fuera de él
+        document.addEventListener('click', (e) => {
+            if (!this.navMenu.contains(e.target) && !this.hamburger.contains(e.target)) {
+                this.closeMobileMenu();
+            }
+        });
     }
 
     toggleMobileMenu() {
-        if (this.navMenu && this.hamburger) {
-            this.navMenu.classList.toggle('active');
-            this.hamburger.classList.toggle('active');
-        }
+        this.navMenu.classList.toggle('active');
+        this.hamburger.classList.toggle('active');
+        document.body.style.overflow = this.navMenu.classList.contains('active') ? 'hidden' : '';
     }
 
     closeMobileMenu() {
-        if (this.navMenu && this.hamburger) {
-            this.navMenu.classList.remove('active');
-            this.hamburger.classList.remove('active');
-        }
+        this.navMenu.classList.remove('active');
+        this.hamburger.classList.remove('active');
+        document.body.style.overflow = '';
     }
 }
 
@@ -148,21 +159,28 @@ class TabManager {
 
 // Smooth Scrolling for Anchor Links
 class SmoothScroll {
-    constructor() {
-        this.setupSmoothScrolling();
-    }
-
     setupSmoothScrolling() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', (e) => {
+                const href = anchor.getAttribute('href');
+                
+                // Solo procesar enlaces internos (#)
+                if (href === '#' || href.startsWith('#!')) return;
+                
                 e.preventDefault();
-                const targetId = anchor.getAttribute('href')?.substring(1);
+                const targetId = href.substring(1);
+                
+                if (!targetId) return;
+                
                 const targetElement = document.getElementById(targetId);
-
+                
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
